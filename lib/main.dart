@@ -1,4 +1,4 @@
-import 'package:arksormobileapp/constant/constant.dart';
+import 'package:arksormobileapp/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -6,6 +6,7 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -53,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
       child:
       ClipRRect(
         borderRadius: new BorderRadius.circular(10.0),
-        child: Image.asset('assets/company/place_holder.png',width: 170),
+        child: Image.asset('assets/company/feed_logo.png',width: 170),
       ),
     );
   }
@@ -67,12 +68,8 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
+      body: Container(
+        decoration: new BoxDecoration(color: ArksorColor.primaryColor),
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Column(
@@ -81,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-              Text("WELCOME TO ARKSOR APP",style: TextStyle(fontSize: 20))
+              Text("WELCOME TO ARKSOR APP",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white))
             ]),
             Row(
                 mainAxisAlignment: MainAxisAlignment.center,

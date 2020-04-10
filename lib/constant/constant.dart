@@ -1,3 +1,3 @@
-class Constant {
-  static final String BASE_URL = "http://www.url.com";
+mixin Constant {
+  static final String baseUrl = "http://www.url.com";
 }
