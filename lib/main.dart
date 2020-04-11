@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
   Future<void> loginPage() async {
     await new Future.delayed(const Duration(seconds: 3));
-    Navigator.push(context, new MaterialPageRoute(builder: (__) => new Login()));
+    Navigator.pushReplacement(context, new MaterialPageRoute(builder: (__) => new Login()));
   }
   @override
   Widget build(BuildContext context) {

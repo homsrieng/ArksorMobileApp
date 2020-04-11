@@ -3,6 +3,7 @@ import 'package:arksormobileapp/utils/colors.dart';
 import 'package:arksormobileapp/utils/font_size.dart';
 import 'package:arksormobileapp/widgets/button.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class Login extends StatelessWidget{
   Widget header() {
     return(
@@ -20,7 +21,11 @@ class Login extends StatelessWidget{
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Text("ARKSOR",style: TextStyle(fontSize: ArksorFontSize.title,fontWeight: FontWeight.bold,color: Colors.white)),
+                          Text("ARKSOR",
+                              style: TextStyle(
+                                  fontSize: ArksorFontSize.title,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white)),
                         ])
                     ],
                   ),
@@ -43,7 +48,7 @@ class Login extends StatelessWidget{
               Row(children: <Widget>[
                 new Expanded(child:
                 TextField(
-                textAlign: TextAlign.left,
+                textAlign: TextAlign.center,
                     decoration: InputDecoration(
                       hintText: 'Please input phone number',
                       hintStyle: TextStyle(color: Colors.grey),
@@ -57,7 +62,7 @@ class Login extends StatelessWidget{
                     margin: const EdgeInsets.only(
                     top: 20),
                     child: 
-                    ArkSorButton.button("Login")
+                    ArkSorButton.btnBorderRadius("Login")
                   )
                 )
               ]),
@@ -68,7 +73,7 @@ class Login extends StatelessWidget{
                     margin: const EdgeInsets.only(
                     top: 5),
                     child: 
-                    ArkSorButton.button("Login With Facebook")
+                    ArkSorButton.btnBorderRadiusIcon("Login With Facebook",FontAwesomeIcons.facebook)
                   )
                 )
               ]),
@@ -79,7 +84,7 @@ class Login extends StatelessWidget{
                     margin: const EdgeInsets.only(
                     top: 5),
                     child: 
-                    ArkSorButton.button("Login With Email")
+                    ArkSorButton.btnBorderRadiusIcon("Login With Email",FontAwesomeIcons.google)
                   )
                 )
               ])
