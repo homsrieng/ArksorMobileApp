@@ -1,4 +1,6 @@
+import 'package:arksormobileapp/pages/login.dart';
 import 'package:arksormobileapp/utils/colors.dart';
+import 'package:arksormobileapp/utils/font_size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -59,6 +61,17 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    WidgetsBinding.instance
+        .addPostFrameCallback((_) => loginPage());
+  }
+  Future<void> loginPage() async {
+    await new Future.delayed(const Duration(seconds: 3));
+    Navigator.push(context, new MaterialPageRoute(builder: (__) => new Login()));
+  }
+  @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
@@ -78,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-              Text("WELCOME TO ARKSOR APP",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white))
+              Text("WELCOME TO ARKSOR APP",style: TextStyle(fontSize: ArksorFontSize.title,fontWeight: FontWeight.bold,color: Colors.white))
             ]),
             Row(
                 mainAxisAlignment: MainAxisAlignment.center,
