@@ -1,12 +1,36 @@
 import 'dart:async';
+import 'dart:io';
 
+import 'package:arksormobileapp/constant/constant.dart';
+import 'package:arksormobileapp/service/internet.dart';
 import 'package:arksormobileapp/utils/colors.dart';
 import 'package:arksormobileapp/utils/font_size.dart';
 import 'package:arksormobileapp/widgets/button.dart';
+import 'package:arksormobileapp/widgets/internet_conn.dart';
+import 'package:connectivity/connectivity.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_offline/flutter_offline.dart';
-class Login extends StatelessWidget{
+class Login extends StatefulWidget {
+  @override
+  _Login createState() => _Login();
+}
+class _Login extends State<Login>{
+
+  Map _source = {ConnectivityResult.none: false};
+  MyConnectivity _connectivity = MyConnectivity.instance;
+
+  InternetConnection internetConnection = new InternetConnection();
+
+  @override
+  void initState() {
+    super.initState();
+    _connectivity.initialise();
+    _connectivity.myStream.listen((source) {
+      setState(() => _source = source);
+    });
+  }
+
   Widget header() {
     return(
         Row(
@@ -95,6 +119,22 @@ class Login extends StatelessWidget{
         )
     );
   }
+
+  String getString(Map _source) {
+    String string;
+    switch (_source.keys.toList()[0]) {
+      case ConnectivityResult.none:
+        string = Constant.OFFLINE;
+        break;
+      case ConnectivityResult.mobile:
+        string = Constant.ONLINE;
+        break;
+      case ConnectivityResult.wifi:
+        string = Constant.ONLINE;
+    }
+    return string;
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -102,9 +142,16 @@ class Login extends StatelessWidget{
       body: Column(
         children: <Widget>[
           header(),
-          formLogin()
+          formLogin(),
+          if(getString(_source)==Constant.OFFLINE)
+          internetConnection.internetStatus()
         ],
       )
     );
+  }
+  @override
+  void dispose() {
+    _connectivity.disposeStream();
+    super.dispose();
   }
 }
