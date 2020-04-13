@@ -1,9 +1,11 @@
-import 'dart:math';
+import 'dart:async';
+
 import 'package:arksormobileapp/utils/colors.dart';
 import 'package:arksormobileapp/utils/font_size.dart';
 import 'package:arksormobileapp/widgets/button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_offline/flutter_offline.dart';
 class Login extends StatelessWidget{
   Widget header() {
     return(
@@ -100,7 +102,7 @@ class Login extends StatelessWidget{
       body: Column(
         children: <Widget>[
           header(),
-          formLogin(),
+          formLogin()
         ],
       )
     );

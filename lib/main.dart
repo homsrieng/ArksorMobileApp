@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
       child:
       ClipRRect(
         borderRadius: new BorderRadius.circular(10.0),
-        child: Image.asset('assets/company/feed_logo.png',width: 170),
+        child: Image.asset('assets/company/logo_with_border.png',width: 170),
       ),
     );
   }
