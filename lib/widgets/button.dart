@@ -1,7 +1,7 @@
 import 'package:arksormobileapp/utils/style.dart';
 import 'package:flutter/material.dart';
 class ArkSorButton{
-  static Widget btnBorderRadius(var text){
+  static Widget btnArksor(var text){
     return (
         Row(
           children: <Widget>[
@@ -18,7 +18,7 @@ class ArkSorButton{
         ])
     );
   }
-  static Widget btnBorderRadiusIcon(var text,IconData icon){
+  static Widget btnArksorIcon(var text,IconData icon){
     return (
           Row(
           children: <Widget>[

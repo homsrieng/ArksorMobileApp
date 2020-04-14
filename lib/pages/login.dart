@@ -1,4 +1,5 @@
 import 'package:arksormobileapp/constant/constant.dart';
+import 'package:arksormobileapp/diment/diment.dart';
 import 'package:arksormobileapp/pages/verification_code.dart';
 import 'package:arksormobileapp/service/internet.dart';
 import 'package:arksormobileapp/utils/colors.dart';
@@ -89,13 +90,13 @@ class _Login extends State<Login>{
                     child:
                     FlatButton(
                         shape: RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(18.0),
+                            borderRadius: new BorderRadius.circular(Diment.sRadius),
                             side: BorderSide(color: ArksorColor.primaryColor)
                         ),
                         color: ArksorColor.primaryColor,
                         onPressed: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => VerificationCode()))},
                         child:
-                        ArkSorButton.btnBorderRadius("Login With Gmail")
+                        ArkSorButton.btnArksor("Login With Gmail")
                     )
                   )
                 )
@@ -109,13 +110,13 @@ class _Login extends State<Login>{
                     child:
                     FlatButton(
                         shape: RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(18.0),
+                            borderRadius: new BorderRadius.circular(Diment.sRadius),
                             side: BorderSide(color: ArksorColor.primaryColor)
                         ),
                         color: ArksorColor.primaryColor,
                         onPressed: () => {},
                         child:
-                        ArkSorButton.btnBorderRadiusIcon("Login With Facebook",FontAwesomeIcons.facebook)
+                        ArkSorButton.btnArksorIcon("Login With Facebook",FontAwesomeIcons.facebook)
                     )
                   )
                 )
@@ -129,13 +130,13 @@ class _Login extends State<Login>{
                     child:
                     FlatButton(
                         shape: RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(18.0),
+                            borderRadius: new BorderRadius.circular(Diment.sRadius),
                             side: BorderSide(color: ArksorColor.primaryColor)
                         ),
                         color: ArksorColor.primaryColor,
                         onPressed: () => {},
                         child:
-                        ArkSorButton.btnBorderRadiusIcon("Login With Gmail",FontAwesomeIcons.google)
+                        ArkSorButton.btnArksorIcon("Login With Gmail",FontAwesomeIcons.google)
                     )
                   )
                 )
