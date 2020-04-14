@@ -1,7 +1,5 @@
-import 'dart:async';
-import 'dart:io';
-
 import 'package:arksormobileapp/constant/constant.dart';
+import 'package:arksormobileapp/pages/verification_code.dart';
 import 'package:arksormobileapp/service/internet.dart';
 import 'package:arksormobileapp/utils/colors.dart';
 import 'package:arksormobileapp/utils/font_size.dart';
@@ -11,6 +9,7 @@ import 'package:connectivity/connectivity.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_offline/flutter_offline.dart';
+
 class Login extends StatefulWidget {
   @override
   _Login createState() => _Login();
@@ -87,8 +86,17 @@ class _Login extends State<Login>{
                     height: 45,
                     margin: const EdgeInsets.only(
                     top: 20),
-                    child: 
-                    ArkSorButton.btnBorderRadius("Login")
+                    child:
+                    FlatButton(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(18.0),
+                            side: BorderSide(color: ArksorColor.primaryColor)
+                        ),
+                        color: ArksorColor.primaryColor,
+                        onPressed: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => VerificationCode()))},
+                        child:
+                        ArkSorButton.btnBorderRadius("Login With Gmail")
+                    )
                   )
                 )
               ]),
@@ -98,8 +106,17 @@ class _Login extends State<Login>{
                     height: 45,
                     margin: const EdgeInsets.only(
                     top: 5),
-                    child: 
-                    ArkSorButton.btnBorderRadiusIcon("Login With Facebook",FontAwesomeIcons.facebook)
+                    child:
+                    FlatButton(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(18.0),
+                            side: BorderSide(color: ArksorColor.primaryColor)
+                        ),
+                        color: ArksorColor.primaryColor,
+                        onPressed: () => {},
+                        child:
+                        ArkSorButton.btnBorderRadiusIcon("Login With Facebook",FontAwesomeIcons.facebook)
+                    )
                   )
                 )
               ]),
@@ -109,8 +126,17 @@ class _Login extends State<Login>{
                     height: 45,
                     margin: const EdgeInsets.only(
                     top: 5),
-                    child: 
-                    ArkSorButton.btnBorderRadiusIcon("Login With Email",FontAwesomeIcons.google)
+                    child:
+                    FlatButton(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(18.0),
+                            side: BorderSide(color: ArksorColor.primaryColor)
+                        ),
+                        color: ArksorColor.primaryColor,
+                        onPressed: () => {},
+                        child:
+                        ArkSorButton.btnBorderRadiusIcon("Login With Gmail",FontAwesomeIcons.google)
+                    )
                   )
                 )
               ])
@@ -119,7 +145,6 @@ class _Login extends State<Login>{
         )
     );
   }
-
   String getString(Map _source) {
     String string;
     switch (_source.keys.toList()[0]) {
