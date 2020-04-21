@@ -1,6 +1,7 @@
 import 'package:arksormobileapp/constant/constant.dart';
 import 'package:arksormobileapp/diment/diment.dart';
 import 'package:arksormobileapp/model/screen_argument.dart';
+import 'package:arksormobileapp/pages/home.dart';
 import 'package:arksormobileapp/service/internet.dart';
 import 'package:arksormobileapp/utils/colors.dart';
 import 'package:arksormobileapp/widgets/button.dart';
@@ -202,7 +203,7 @@ class _Registration extends State<Registration>{
                                         side: BorderSide(color: ArksorColor.primaryColor)
                                     ),
                                     color: ArksorColor.primaryColor,
-                                    onPressed: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => Registration()))},
+                                    onPressed: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()))},
                                     child:
                                     ArkSorButton.btnArksor("Register"),
                                   )

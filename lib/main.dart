@@ -1,5 +1,4 @@
 import 'package:arksormobileapp/pages/login.dart';
-import 'package:arksormobileapp/pages/verification_code.dart';
 import 'package:arksormobileapp/utils/colors.dart';
 import 'package:arksormobileapp/utils/font_size.dart';
 import 'package:flutter/material.dart';
