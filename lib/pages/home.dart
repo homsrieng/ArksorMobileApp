@@ -1,5 +1,4 @@
 import 'package:arksormobileapp/pages/feeds.dart';
-import 'package:arksormobileapp/pages/login.dart';
 import 'package:arksormobileapp/pages/notification.dart';
 import 'package:arksormobileapp/pages/setting.dart';
 import 'package:arksormobileapp/pages/user_profile.dart';
