@@ -114,12 +114,12 @@ class DataSearch extends SearchDelegate<String> {
           ),
         );
       },
-      trailing: Icon(Icons.remove_red_eye),
+      trailing: Icon(Icons.search),
       title: RichText(
         text: TextSpan(
             text: suggestionList[index].titlelist.substring(0, query.length),
             style: TextStyle(
-                color: Colors.red, fontWeight: FontWeight.bold),
+                color: Colors.red),
             children: [
               TextSpan(
                   text: suggestionList[index].titlelist.substring(query.length),

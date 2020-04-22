@@ -39,7 +39,7 @@ class FeedItem {
                                       )),
                                   new Container(
                                     margin: const EdgeInsets.only(
-                                        left: 20
+                                        left: 10
                                     ),
                                     child: Text("Name Surename",style: TextStyle(fontWeight: FontWeight.bold),),
                                   )
@@ -68,15 +68,15 @@ class FeedItem {
                               flex: 1,
                               child:
                               Container(
+                                color: Colors.grey,
                                 margin: const EdgeInsets.only(
                                     top: 10
                                 ),
                                 height: 200,
-                                decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                      fit: BoxFit.fill,
-                                      image: NetworkImage('https://tst-construction.com/wp-content/uploads/2018/01/photo-placeholder-800x450.jpg'),
-                                    )
+                                child: FadeInImage.assetNetwork(
+                                  fit: BoxFit.fitWidth,
+                                  placeholder: 'assets/company/place_holder.png',
+                                  image: 'https://tst-construction.com/wp-content/uploads/2018/01/photo-placeholder-800x450.jpg',
                                 ),
                               )
                           )
