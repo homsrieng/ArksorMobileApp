@@ -1,6 +1,7 @@
 import 'package:arksormobileapp/constant/constant.dart';
 import 'package:arksormobileapp/diment/diment.dart';
 import 'package:arksormobileapp/model/screen_argument.dart';
+import 'package:arksormobileapp/pages/login.dart';
 import 'package:arksormobileapp/pages/registration.dart';
 import 'package:arksormobileapp/service/internet.dart';
 import 'package:arksormobileapp/utils/colors.dart';
@@ -97,18 +98,8 @@ class _VerificationCode extends State<VerificationCode>{
                                   height: 45,
                                   margin: const EdgeInsets.only(
                                       top: 20),
-                                  child:
-                                  FlatButton(
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius: new BorderRadius.circular(Diment.sRadius),
-                                          side: BorderSide(color: ArksorColor.primaryColor)
-                                      ),
-                                      color: ArksorColor.primaryColor,
-                                      onPressed: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => Registration()))},
-                                      child:
-                                      ArkSorButton.btnArksor("Ok")
+                                  child:ArkSorButton.btnArksorRadius("Ok", null,function: () =>Navigator.push(context, MaterialPageRoute(builder: (context) => Registration())))
                                   )
-                              )
                               )
                             ]),
                           ],),

@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'home.dart';
 
 class FeedPage extends StatelessWidget{
-  Widget feedItem(){
+  Widget feedItem(BuildContext context){
     return(
         Expanded(child:
         Align(
@@ -16,10 +16,10 @@ class FeedPage extends StatelessWidget{
           child: (
               SingleChildScrollView(child:
                 Column(children: <Widget>[
-                  FeedItem.item(),
-                  FeedItem.item(),
-                  FeedItem.item(),
-                  FeedItem.item(),
+                  FeedItem.item(context),
+                  FeedItem.item(context),
+                  FeedItem.item(context),
+                  FeedItem.item(context),
                 ],)
               )
           ),
@@ -50,7 +50,7 @@ class FeedPage extends StatelessWidget{
       ),
       body: Column(
         children: <Widget>[
-          feedItem()
+          feedItem(context)
         ],
       ),
     );

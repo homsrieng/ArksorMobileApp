@@ -1,8 +1,9 @@
+import 'package:arksormobileapp/pages/feed_item_detail.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class FeedItem {
-  static Widget item() {
+  static Widget item(BuildContext context) {
     return (
         Row(
           children: <Widget>[
@@ -67,18 +68,21 @@ class FeedItem {
                           new Expanded(
                               flex: 1,
                               child:
-                              Container(
-                                color: Colors.grey,
-                                margin: const EdgeInsets.only(
-                                    top: 10
+                              GestureDetector(
+                                onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => FeedItemDetail())); },
+                                child: Container(
+                                  color: Colors.grey,
+                                  margin: const EdgeInsets.only(
+                                      top: 10
+                                  ),
+                                  height: 200,
+                                  child: FadeInImage.assetNetwork(
+                                    fit: BoxFit.fitWidth,
+                                    placeholder: 'assets/company/place_holder.png',
+                                    image: 'https://tst-construction.com/wp-content/uploads/2018/01/photo-placeholder-800x450.jpg',
+                                  ),
                                 ),
-                                height: 200,
-                                child: FadeInImage.assetNetwork(
-                                  fit: BoxFit.fitWidth,
-                                  placeholder: 'assets/company/place_holder.png',
-                                  image: 'https://tst-construction.com/wp-content/uploads/2018/01/photo-placeholder-800x450.jpg',
-                                ),
-                              )
+                              ),
                           )
                         ],),
                       Row(
@@ -127,6 +131,71 @@ class FeedItem {
                             )
                           ]
                       ),
+                    ],),
+                )
+            )
+          ],)
+    );
+  }
+  static Widget listComment() {
+    return (
+        Row(
+          children: <Widget>[
+            new Expanded(
+                child:
+                Container(
+                  padding: const EdgeInsets.only(
+                      top: 10,
+                      left: 20,
+                      right: 20,
+                      bottom: 10
+                  ),
+                  child:Column(
+                    children: <Widget>[
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            new Column(
+                              children: <Widget>[
+                                Row(children: <Widget>[
+                                  new Container(
+                                    width: 40.0,
+                                    height: 40.0,
+                                    decoration: new BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        image: new DecorationImage(
+                                            fit: BoxFit.fill,
+                                            image: AssetImage('assets/company/avatar_placeholder.png')
+                                        )
+                                    ),
+                                  ),
+                                  new Container(
+                                    padding: const EdgeInsets.only(
+                                        top: 5,
+                                        left: 5,
+                                        right: 5,
+                                        bottom: 5
+                                    ),
+                                    margin: const EdgeInsets.only(
+                                        left: 5
+                                    ),
+                                    width: 200,
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey[300],
+                                        shape: BoxShape.rectangle,
+                                        borderRadius: BorderRadius.only(
+                                            topRight: Radius.circular(10.0),
+                                            bottomLeft: Radius.circular(10.0),
+                                            bottomRight: Radius.circular(10.0)
+                                        )
+                                    ),
+                                    child: Text("How to add Border Radius to Container in Flutter?"),
+                                  )
+                                ],)
+                              ],
+                            )
+                          ]
+                      )
                     ],),
                 )
             )

@@ -2,6 +2,7 @@ import 'package:arksormobileapp/constant/constant.dart';
 import 'package:arksormobileapp/diment/diment.dart';
 import 'package:arksormobileapp/model/screen_argument.dart';
 import 'package:arksormobileapp/pages/home.dart';
+import 'package:arksormobileapp/pages/verification_code.dart';
 import 'package:arksormobileapp/service/internet.dart';
 import 'package:arksormobileapp/utils/colors.dart';
 import 'package:arksormobileapp/widgets/button.dart';
@@ -82,7 +83,6 @@ class _Registration extends State<Registration>{
       },
     );
   }
-
   Widget formInputVerifyCode(){
     return(
         Expanded(child:
@@ -197,16 +197,7 @@ class _Registration extends State<Registration>{
                                   margin: const EdgeInsets.only(
                                       top: 20),
                                   child:
-                                  FlatButton(
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius: new BorderRadius.circular(Diment.sRadius),
-                                        side: BorderSide(color: ArksorColor.primaryColor)
-                                    ),
-                                    color: ArksorColor.primaryColor,
-                                    onPressed: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()))},
-                                    child:
-                                    ArkSorButton.btnArksor("Register"),
-                                  )
+                                  ArkSorButton.btnArksorRadius("Register",null, function: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen())))
                               )
                               )
                             ]),
@@ -220,6 +211,7 @@ class _Registration extends State<Registration>{
         )
     );
   }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

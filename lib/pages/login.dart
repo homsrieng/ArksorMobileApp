@@ -1,5 +1,6 @@
 import 'package:arksormobileapp/constant/constant.dart';
 import 'package:arksormobileapp/diment/diment.dart';
+import 'package:arksormobileapp/pages/registration.dart';
 import 'package:arksormobileapp/pages/verification_code.dart';
 import 'package:arksormobileapp/service/internet.dart';
 import 'package:arksormobileapp/utils/colors.dart';
@@ -87,17 +88,7 @@ class _Login extends State<Login>{
                     height: 45,
                     margin: const EdgeInsets.only(
                     top: 20),
-                    child:
-                    FlatButton(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(Diment.sRadius),
-                            side: BorderSide(color: ArksorColor.primaryColor)
-                        ),
-                        color: ArksorColor.primaryColor,
-                        onPressed: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => VerificationCode()))},
-                        child:
-                        ArkSorButton.btnArksor("Login With Gmail")
-                    )
+                    child:ArkSorButton.btnArksorRadius("Login",null, function: () => Navigator.push(context, MaterialPageRoute(builder: (context) => VerificationCode())))
                   )
                 )
               ]),
@@ -107,17 +98,7 @@ class _Login extends State<Login>{
                     height: 45,
                     margin: const EdgeInsets.only(
                     top: 5),
-                    child:
-                    FlatButton(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(Diment.sRadius),
-                            side: BorderSide(color: ArksorColor.primaryColor)
-                        ),
-                        color: ArksorColor.primaryColor,
-                        onPressed: () => {},
-                        child:
-                        ArkSorButton.btnArksorIcon("Login With Facebook",FontAwesomeIcons.facebook)
-                    )
+                    child:ArkSorButton.btnArksorRadius("Login With Facebook",FontAwesomeIcons.facebook, function: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Registration())))
                   )
                 )
               ]),
@@ -127,17 +108,7 @@ class _Login extends State<Login>{
                     height: 45,
                     margin: const EdgeInsets.only(
                     top: 5),
-                    child:
-                    FlatButton(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(Diment.sRadius),
-                            side: BorderSide(color: ArksorColor.primaryColor)
-                        ),
-                        color: ArksorColor.primaryColor,
-                        onPressed: () => {},
-                        child:
-                        ArkSorButton.btnArksorIcon("Login With Gmail",FontAwesomeIcons.google)
-                    )
+                    child:ArkSorButton.btnArksorRadius("Login With Gmail",FontAwesomeIcons.google, function: () => Navigator.push(context, MaterialPageRoute(builder: (context) => VerificationCode())))
                   )
                 )
               ])
