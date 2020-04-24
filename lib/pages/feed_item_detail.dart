@@ -61,7 +61,7 @@ class FeedItemDetail extends StatelessWidget{
                   margin: const EdgeInsets.only(
                       right: 20, bottom: 20,top: 10,left: 5
                   ),
-                  child:ArkSorButton.btnArksorNoBg("Send", null,function: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen())))
+                  child:ArkSorButton.btnArksorNoBg("Send", null,function: () => Navigator.push(context, MaterialPageRoute(builder: (context) => FeedItemDetail())))
               ),
             ),
           ],)
