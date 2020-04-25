@@ -5,6 +5,7 @@ import 'package:arksormobileapp/pages/home.dart';
 import 'package:arksormobileapp/pages/verification_code.dart';
 import 'package:arksormobileapp/service/internet.dart';
 import 'package:arksormobileapp/utils/colors.dart';
+import 'package:arksormobileapp/utils/margin.dart';
 import 'package:arksormobileapp/widgets/button.dart';
 import 'package:arksormobileapp/widgets/date_picker_bottom_sheet.dart';
 import 'package:arksormobileapp/widgets/internet_conn.dart';
@@ -96,10 +97,10 @@ class _Registration extends State<Registration>{
                       child:
                       Container(
                         padding: const EdgeInsets.only(
-                            top: 20,
-                            left: 20,
-                            right: 20,
-                            bottom: 20
+                            top: ArksorMargin.defaultMargin,
+                            left: ArksorMargin.defaultMargin,
+                            right: ArksorMargin.defaultMargin,
+                            bottom: ArksorMargin.defaultMargin
                         ),
                         child:Column(
                           children: <Widget>[

@@ -1,4 +1,5 @@
 import 'package:arksormobileapp/pages/feed_item_detail.dart';
+import 'package:arksormobileapp/utils/margin.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,10 +12,10 @@ class FeedItem {
                 child:
                 Container(
                   padding: const EdgeInsets.only(
-                      top: 20,
-                      left: 20,
-                      right: 20,
-                      bottom: 20
+                      top: ArksorMargin.defaultMargin,
+                      left: ArksorMargin.defaultMargin,
+                      right: ArksorMargin.defaultMargin,
+                      bottom: ArksorMargin.defaultMargin
                   ),
                   margin: const EdgeInsets.only(
                       bottom: 10

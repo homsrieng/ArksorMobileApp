@@ -1,3 +1,4 @@
+import 'package:arksormobileapp/pages/feed_new_post.dart';
 import 'package:arksormobileapp/pages/profile_detail.dart';
 import 'package:arksormobileapp/utils/colors.dart';
 import 'package:arksormobileapp/widgets/feed_item.dart';
@@ -38,6 +39,15 @@ class FeedPage extends StatelessWidget{
         actions: <Widget>[
           IconButton(
             icon: Icon(
+              Icons.library_add,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => FeedNewPost()));
+            },
+          ),
+          IconButton(
+            icon: Icon(
               Icons.search,
               color: Colors.white,
             ),
@@ -45,7 +55,7 @@ class FeedPage extends StatelessWidget{
               //Navigator.push(context, MaterialPageRoute(builder: (context) => SearchBar()));
               showSearch(context: context, delegate: DataSearch(listWords));
             },
-          )
+          ),
         ],
       ),
       body: Column(

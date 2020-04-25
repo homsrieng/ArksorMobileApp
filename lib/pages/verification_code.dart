@@ -5,6 +5,7 @@ import 'package:arksormobileapp/pages/login.dart';
 import 'package:arksormobileapp/pages/registration.dart';
 import 'package:arksormobileapp/service/internet.dart';
 import 'package:arksormobileapp/utils/colors.dart';
+import 'package:arksormobileapp/utils/margin.dart';
 import 'package:arksormobileapp/utils/style.dart';
 import 'package:arksormobileapp/widgets/button.dart';
 import 'package:arksormobileapp/widgets/internet_conn.dart';
@@ -54,10 +55,10 @@ class _VerificationCode extends State<VerificationCode>{
                       new Expanded(child:
                       Container(
                         padding: const EdgeInsets.only(
-                            top: 20,
-                            left: 20,
-                            right: 20,
-                            bottom: 20
+                            top: ArksorMargin.defaultMargin,
+                            left: ArksorMargin.defaultMargin,
+                            right: ArksorMargin.defaultMargin,
+                            bottom: ArksorMargin.defaultMargin
                         ),
                         child:Column(
                           mainAxisAlignment: MainAxisAlignment.center,

@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 class ArksorMargin{
-  static var marginTopMedium = 20.toDouble();
+  static const double defaultMargin = 20;
 }

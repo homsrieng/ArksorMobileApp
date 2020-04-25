@@ -1,4 +1,3 @@
-import 'package:arksormobileapp/pages/registration.dart';
 import 'package:arksormobileapp/utils/colors.dart';
 import 'package:arksormobileapp/widgets/button.dart';
 import 'package:arksormobileapp/widgets/feed_item.dart';
@@ -31,6 +30,32 @@ class FeedItemDetail extends StatelessWidget{
         )
     );
   }
+  Widget userComment(BuildContext context) {
+    return(
+        Row(children: <Widget>[
+          Expanded(
+            flex: 3,
+            child: Container(
+                margin: const EdgeInsets.only(
+                    left: 20, bottom: 20,top: 10
+                ),
+                height: 40,
+                child: ArksorTextInput.textFormFieldRadius("Comments...")
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+                height: 40,
+                margin: const EdgeInsets.only(
+                    right: 20, bottom: 20,top: 10,left: 5
+                ),
+                child:ArkSorButton.btnArksorNoBg("Send", null,function: () => Navigator.push(context, MaterialPageRoute(builder: (context) => FeedItemDetail())))
+            ),
+          ),
+        ],)
+    );
+  }
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -43,28 +68,7 @@ class FeedItemDetail extends StatelessWidget{
         children: <Widget>[
           FeedItem.item(context),
           listComment(),
-          Row(children: <Widget>[
-            Expanded(
-              flex: 3,
-              child: Container(
-                margin: const EdgeInsets.only(
-                    left: 20, bottom: 20,top: 10
-                ),
-                height: 40,
-                child: ArksorTextInput.textFormFieldRadius("Comments...")
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                  height: 40,
-                  margin: const EdgeInsets.only(
-                      right: 20, bottom: 20,top: 10,left: 5
-                  ),
-                  child:ArkSorButton.btnArksorNoBg("Send", null,function: () => Navigator.push(context, MaterialPageRoute(builder: (context) => FeedItemDetail())))
-              ),
-            ),
-          ],)
+          userComment(context)
         ],
       ),
     );

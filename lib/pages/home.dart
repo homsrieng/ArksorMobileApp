@@ -97,7 +97,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             icon: Icon(Icons.settings),
             title: Text(''),
           )
-
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: ArksorColor.primaryColor,
