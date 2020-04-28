@@ -125,8 +125,8 @@ class _VerificationCode extends State<VerificationCode>{
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           formInputVerifyCode(),
-          if(getString(_source)==Constant.OFFLINE)
-            internetConnection.internetStatus()
+          // if(getString(_source)==Constant.OFFLINE)
+          // internetConnection.internetStatus()
         ],
       ),
     );

@@ -141,8 +141,8 @@ class _Login extends State<Login>{
         children: <Widget>[
           header(),
           formLogin(),
-          if(getString(_source)==Constant.OFFLINE)
-          internetConnection.internetStatus()
+          // if(getString(_source)==Constant.OFFLINE)
+          // internetConnection.internetStatus()
         ],
       )
     );

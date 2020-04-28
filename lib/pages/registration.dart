@@ -225,8 +225,8 @@ class _Registration extends State<Registration>{
       body:Column(
         children: <Widget>[
           formInputVerifyCode(),
-          if(getString(_source)==Constant.OFFLINE)
-            internetConnection.internetStatus(),
+          // if(getString(_source)==Constant.OFFLINE)
+          // internetConnection.internetStatus(),
         ],
       )
     );
