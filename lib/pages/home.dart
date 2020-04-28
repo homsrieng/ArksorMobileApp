@@ -80,13 +80,31 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             title: Text(''),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
+            icon: new Stack(
+              children: <Widget>[
+              new Icon(Icons.notifications),
+                    new Positioned(
+                      top: 1.0,
+                      right: 0.0,
+                      child: new Stack(
+                        children: <Widget>[
+                            new Icon(Icons.brightness_1,
+                                size: 15.0, color: Colors.red[500]),
+                            new Positioned(
+                            top: 4,
+                            left: 4,
+                            child: new Text("100",
+                                        style: new TextStyle(color: Colors.white, fontSize: 5, fontWeight: FontWeight.w500)),
+                    )],
+                  ),
+              )],
+          ),
             title: Text(''),
           ),
           BottomNavigationBarItem(

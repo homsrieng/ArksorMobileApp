@@ -7,7 +7,7 @@ import 'package:arksormobileapp/utils/margin.dart';
 import 'package:arksormobileapp/widgets/button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker_modern/image_picker_modern.dart';
+import 'package:image_picker/image_picker.dart';
 
 class FeedNewPost extends StatefulWidget {
   @override

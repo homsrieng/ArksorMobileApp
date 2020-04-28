@@ -23,7 +23,7 @@ dependencies:
   flutter_offline: "^0.2.2"
   connectivity: ^0.4.2
   flutter_cupertino_date_picker: ^1.0.12
-  image_picker_modern: ^0.4.12+3
+  image_picker: 0.6.5+2
   video_player: ^0.10.9+1
 
   # The following adds the Cupertino Icons font to your application.

@@ -1,4 +1,4 @@
-import 'package:arksormobileapp/utils/font_size.dart';
+import 'package:arksormobileapp/pages/notification_detail.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,52 +18,59 @@ class NotificationListItem {
                   ),
                   child:Column(
                     children: <Widget>[
-                      Row(
-                          children: [
-                            new Column(
-                              children: <Widget>[
-                                Row(children: <Widget>[
-                                  new Container(
-                                    width: 40.0,
-                                    height: 40.0,
-                                    decoration: new BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        image: new DecorationImage(
-                                            fit: BoxFit.fill,
-                                            image: AssetImage('assets/company/avatar_placeholder.png')
+                      GestureDetector(
+                          onTap:()=> {Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationDetail()))},
+                          child:AbsorbPointer(
+                            child: Row(
+                                children: [
+                                  new Column(
+                                    children: <Widget>[
+                                      Row(children: <Widget>[
+                                        new Container(
+                                          width: 40.0,
+                                          height: 40.0,
+                                          decoration: new BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              image: new DecorationImage(
+                                                  fit: BoxFit.fill,
+                                                  image: AssetImage('assets/company/avatar_placeholder.png')
+                                              )
+                                          ),
+                                        ),
+                                        new Container(
+                                          padding: const EdgeInsets.only(
+                                              top: 5,
+                                              left: 5,
+                                              right: 5,
+                                              bottom: 5
+                                          ),
+                                          margin: const EdgeInsets.only(
+                                              left: 5
+                                          ),
                                         )
-                                    ),
+                                      ],)
+                                    ],
                                   ),
-                                  new Container(
-                                    padding: const EdgeInsets.only(
-                                        top: 5,
-                                        left: 5,
-                                        right: 5,
-                                        bottom: 5
-                                    ),
-                                    margin: const EdgeInsets.only(
-                                        left: 5
-                                    ),
-                                  )
-                                ],)
-                              ],
+                                  Column(children: <Widget>[
+                                    Row(children: <Widget>[
+                                      Container(
+                                        width: 250,
+                                        child: Text("Name Surename",style: TextStyle(fontWeight: FontWeight.bold),),
+                                      )
+                                    ],),
+                                    Row(children: <Widget>[
+                                      Container(
+                                        width: 250,
+                                        child:
+                                        Text("SizedBox.expand will make the button take full width and height,",
+                                            style: TextStyle(fontSize: 11)),
+                                      )
+                                    ],)
+                                  ],)
+                                ]
                             ),
-                            Column(children: <Widget>[
-                              Row(children: <Widget>[
-                                Container(
-                                  width: 300,
-                                  child: Text("Name Surename",style: TextStyle(fontWeight: FontWeight.bold),),
-                                )
-                              ],),
-                              Row(children: <Widget>[
-                                Container(
-                                  width: 300,
-                                  child: Text("SizedBox.expand will make the button take full width and height,"),
-                                )
-                              ],)
-                            ],)
-                          ]
-                      )
+                          )
+                      ),
                     ],),
                 )
             )
