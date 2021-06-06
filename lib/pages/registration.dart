@@ -84,6 +84,32 @@ class _Registration extends State<Registration>{
       },
     );
   }
+
+
+  List gender=["Male","Female","Other"];
+
+  String select;
+
+  Row addRadioButton(int btnValue, String title) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: <Widget>[
+        Radio(
+          activeColor: Theme.of(context).primaryColor,
+          value: gender[btnValue],
+          groupValue: select,
+          onChanged: (value){
+            setState(() {
+              print(value);
+              select=value;
+            });
+          },
+        ),
+        Text(title)
+      ],
+    );
+  }
+
   Widget formInputVerifyCode(){
     return(
         Expanded(child:
@@ -131,16 +157,11 @@ class _Registration extends State<Registration>{
                                 ))
                               ],),
                             Row(
-                              children: <Widget>[
-                                new Text('Male'),
-                                new Radio(
-                                  value: 0,
-                                ),
-                                new Text('Female'),
-                                new Radio(
-                                  value: 1,
-                                ),
-                              ],),
+                                children: <Widget>[
+                                  addRadioButton(0, 'Male'),
+                                  addRadioButton(1, 'Female'),
+                                  addRadioButton(2, 'Others'),
+                                ],),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[

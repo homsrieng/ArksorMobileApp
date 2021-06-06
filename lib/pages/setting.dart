@@ -1,12 +1,8 @@
 import 'package:arksormobileapp/pages/login.dart';
 import 'package:arksormobileapp/utils/colors.dart';
-import 'package:arksormobileapp/utils/margin.dart';
 import 'package:arksormobileapp/widgets/setting_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-import 'feed_item_detail.dart';
 
 class SettingPage extends StatelessWidget{
   @override
